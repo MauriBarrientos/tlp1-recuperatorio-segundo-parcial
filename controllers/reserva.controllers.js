@@ -1,5 +1,3 @@
-const ctrlReservas = {};
-
 const ctrlReserva = {};
 const Reserva = require('../models/Reserva');
 
@@ -149,5 +147,3 @@ ctrlReserva.eliminarReserva = async (req, res) => {
 }
 
 module.exports = ctrlReserva;
-
-module.exports = ctrlReservas;

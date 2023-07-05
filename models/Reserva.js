@@ -1,4 +1,4 @@
-
+const { sequelize, DataTypes } = require('../database');
 
 const Reserva = sequelize.define('Reserva', {
     id: {
