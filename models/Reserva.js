@@ -15,10 +15,6 @@ const Reserva = sequelize.define('Reserva', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    DNI: {
-        type: DataTypes.INTEGER,
-        allownull: false
-    },
     email: {
         type: DataTypes.STRING,
         allowNull: false

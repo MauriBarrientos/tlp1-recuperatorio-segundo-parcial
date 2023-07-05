@@ -56,15 +56,16 @@ ctrlReserva.obtenerReserva = async (req, res) => {
 
 // Controlador para crear una reserva
 ctrlReserva.crearReserva = async (req, res) => {
-    const { nombre,apellido,fechaEntrada,fechaSalida,numero} = req.body;
+    const { nombre,apellido, email, destino, fechaSalida, fechaRegreso} = req.body;
     
     try {
         const reserva = await Reserva.create({
             nombre,
             apellido,
-            fechaEntrada,
+            email,
+            destino,
             fechaSalida,
-            numero
+            fechaRegreso
         });
 
         if (!reserva) {
@@ -84,15 +85,16 @@ ctrlReserva.crearReserva = async (req, res) => {
 // Controlador para actualizar o editar una reserva
 ctrlReserva.actualizarReserva = async (req, res) => {
     const { id } = req.params;
-    const { nombre, apellido, fechaEntrada, fechaSalida, numero } = req.body;
+    const { nombre,apellido, email, destino, fechaSalida, fechaRegreso } = req.body;
     
     try {
         const reservaActualizada = await Reserva.update({
             nombre,
             apellido,
-            fechaEntrada,
+            email,
+            destino,
             fechaSalida,
-            numero,
+            fechaRegreso,
         }, {
             where: {
                 id,
