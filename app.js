@@ -5,11 +5,16 @@ const path = require('path');
 const morgan = require('morgan');
 const app = express();
 require('dotenv').config();
+
 require('ejs');
 
 //Instancia de conexión con el puerto
 const port = process.env.PORT || 4000;
 
+//Instancia de conexion a la base de datos
+sequelize.authenticate()
+    .then(() => console.log('Conexión a base de datos exitosa'))
+    .catch((error) => console.log('Error al conectar a base de datos', error));
 
 // Middlewares
 app.use(cors());
