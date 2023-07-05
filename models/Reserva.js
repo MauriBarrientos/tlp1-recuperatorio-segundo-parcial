@@ -19,16 +19,20 @@ const Reserva = sequelize.define('Reserva', {
         type: DataTypes.INTEGER,
         allownull: false
     },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    destino: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     fechaSalida: {
         type: DataTypes.DATEONLY,
         allowNull: false
     },
     fechaRegreso: {
         type: DataTypes.DATEONLY,
-        allowNull: false
-    },
-    email: {
-        type: DataTypes.STRING,
         allowNull: false
     },
     codigoReserva: {

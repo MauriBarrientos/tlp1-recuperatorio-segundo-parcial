@@ -5,7 +5,7 @@ const path = require('path');
 const morgan = require('morgan');
 const app = express();
 require('dotenv').config();
-
+const {sequelize} = require('./database');
 require('ejs');
 
 //Instancia de conexión con el puerto
